@@ -30,14 +30,12 @@ public class TerrainGeneration : MonoBehaviour
     public int tileHeight = 30;
     public GameObject blueHotel;
     public GameObject redHotel;
-    public GameObject purpleHotel;
     
     private List<TerrainPrefabs> terrains = new List<TerrainPrefabs>();
     void Start()
     {
         GenerateHotel(blueHotel);
         GenerateHotel(redHotel);
-        GenerateHotel(purpleHotel);
         SortTerrains();
         GenerateTerrain();
     }
@@ -83,7 +81,7 @@ public class TerrainGeneration : MonoBehaviour
                 GameObject randGo = Instantiate(terrains[index].GetRandomTile(), pos, Quaternion.identity);
                 BiomeHandler biomeHandler = randGo.GetComponent<BiomeHandler>();
                 biomeHandler.Create(index);
-                GameManager.instance.chosenBiomes.Add(biomeHandler);
+                GameManager.instance.chosenBiomes[index] = biomeHandler;
             }
         }
     }
@@ -107,6 +105,6 @@ public class TerrainGeneration : MonoBehaviour
         GameObject randGo = Instantiate(hotel, position, Quaternion.identity);
         BiomeHandler biomeHandler = randGo.GetComponent<BiomeHandler>();
         biomeHandler.Create(index);
-        GameManager.instance.chosenBiomes.Add(biomeHandler);
+        GameManager.instance.chosenBiomes[index] = biomeHandler;
     }
 }

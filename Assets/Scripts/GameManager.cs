@@ -35,12 +35,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get; private set; }
     [HideInInspector] public List<BiomeHandler> chosenBiomes = new List<BiomeHandler>();
     public BiomeHandler CurrentBiome { get; private set; }
-    
-    private TerrainGeneration terrain;
     private int currentBiomeIndex = 0;
     void Awake()
     {
-        terrain = GetComponent<TerrainGeneration>();
         for(int i = 0; i < 36; i++)
         {
             chosenBiomes.Add(null);

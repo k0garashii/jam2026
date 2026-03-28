@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 652707313499649749}
   - component: {fileID: 3212874692184303330}
   - component: {fileID: 2005865094226048646}
-  - component: {fileID: 3573862406301925120}
   - component: {fileID: 6767519344846573013}
   - component: {fileID: 8711035546979906029}
   m_Layer: 0
@@ -101,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49ab9aa0188e374ba0f4bee9bca885b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  MeshTransform: {fileID: 4038168189174941569}
   moveAction:
     m_Name: Move
     m_Type: 0
@@ -194,28 +194,6 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   moveSpeed: 5
---- !u!95 &3573862406301925120
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7422194797843393414}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2bdb15282699d5b4a96507a4ef9af294, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6767519344846573013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,6 +370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sk_Golem_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 1516dfe3fca8b6a48aa336e45b9f2476, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2bdb15282699d5b4a96507a4ef9af294, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
