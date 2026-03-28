@@ -49,17 +49,17 @@ public class PlayerController : MonoBehaviour
         if(blueShrineAction.IsPressed())
         {
             if(GameManager.instance.CurrentBiome.biomeType == BiomeType.RedShrine)
-                Debug.Log("Lose");
+                GameManager.instance.Win();
             else if(GameManager.instance.CurrentBiome.biomeType == BiomeType.BlueShrine)
-                Debug.Log("Win");
+                GameManager.instance.Lose();
         }
 
         if (redShrineAction.IsPressed())
         {
             if(GameManager.instance.CurrentBiome.biomeType == BiomeType.RedShrine)
-                Debug.Log("Win");
+                GameManager.instance.Lose();
             else if(GameManager.instance.CurrentBiome.biomeType == BiomeType.BlueShrine)
-                Debug.Log("Lose");
+                GameManager.instance.Win();
         }
     }
 
@@ -72,9 +72,14 @@ public class PlayerController : MonoBehaviour
         GameManager.instance.UpdatePlayerPosition(startingBiome);
 
         FootstepPlayer footstepPlayer = GetComponent<FootstepPlayer>();
-        if (footstepPlayer != null)
+        if (footstepPlayer)
         {
             footstepPlayer.ResetFootsteps();
         }
+    }
+    
+    public void Deactivate()
+    {
+        enabled = false;
     }
 }

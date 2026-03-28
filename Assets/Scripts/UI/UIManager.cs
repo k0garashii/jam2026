@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UI
 {
@@ -16,6 +17,11 @@ namespace UI
         public void SetMiniMap()
         {
             GameManager.instance.SetMiniMap();
+        }
+        
+        public void ReloadScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

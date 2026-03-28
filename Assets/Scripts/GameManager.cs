@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour
     public List<RawImage> biomes = new List<RawImage>();
     public List<RawImage> sounds = new List<RawImage>();
     public Button mainScreenButton;
+    public Button winScreenButton;
+    public Button loseScreenButton;
+    public GameObject LoseScreen;
+    public GameObject WinScreen;
     
     public static GameManager instance { get; private set; }
     [HideInInspector] public List<BiomeHandler> chosenBiomes = new List<BiomeHandler>();
@@ -96,5 +100,19 @@ public class GameManager : MonoBehaviour
     public void Play()
     {
         controller.Activate();
+    }
+    
+    public void Win()
+    {
+        controller.Deactivate();
+        WinScreen.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(winScreenButton.gameObject);
+    }
+    
+    public void Lose()
+    {
+        controller.Deactivate();
+        LoseScreen.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(loseScreenButton.gameObject);
     }
 }
