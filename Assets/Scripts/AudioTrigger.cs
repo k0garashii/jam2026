@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class AudioTrigger : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class AudioTrigger : MonoBehaviour
         for (int i = 0; i < audioSource.Count; i++)
         {
             audioSource[i].Stop();
+            Gamepad.current.SetMotorSpeeds(0.5f, 1f);
         }
     }
 }
