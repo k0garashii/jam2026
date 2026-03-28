@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3212874692184303330}
   - component: {fileID: 2005865094226048646}
   - component: {fileID: 3573862406301925120}
+  - component: {fileID: 6767519344846573013}
+  - component: {fileID: 8711035546979906029}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -214,6 +216,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6767519344846573013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7422194797843393414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fba5f117c54451481ae75973a6261d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FootstepPlayer
+  stepInterval: 0.58
+--- !u!114 &8711035546979906029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7422194797843393414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e5d327a80a483aa9e9cb080c4a9926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BiomeSoundPlayer
 --- !u!1 &8245882527939227778
 GameObject:
   m_ObjectHideFlags: 0
