@@ -13,9 +13,9 @@ namespace UI
 #endif
         }
         
-        public void ShowMiniMap()
+        public void SetMiniMap()
         {
-            GameManager.instance.ShowMiniMap();
+            GameManager.instance.SetMiniMap();
         }
     }
 }
