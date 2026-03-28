@@ -24,12 +24,15 @@ public class TerrainGeneration : MonoBehaviour
     public TerrainPrefabs bottom;
     public TerrainPrefabs bottomRight;
     //The first item of the list is the top left terrain. It goes from left to right, the from top to bottom.
-    private List<TerrainPrefabs> terrains = new List<TerrainPrefabs>();
     public int numLines = 6;
     public int numColumns = 6;
-    
+    public int tileWidth = 40;
+    public int tileHeight = 30;
     public GameObject greenHotel;
     public GameObject redHotel;
+    
+    private List<TerrainPrefabs> terrains = new List<TerrainPrefabs>();
+    [HideInInspector] public List<BiomeHandler> chosenBiomes = new List<BiomeHandler>();
     void Start()
     {
         SortTerrains();
@@ -71,8 +74,8 @@ public class TerrainGeneration : MonoBehaviour
             for (int j = 0; j < numColumns; j++)
             {
                 GameObject randGo =  terrains[i * numLines + j].GetRandomTile();
-                //Position to modify
-                Vector3 pos = new Vector3(j * 40, 0, -i * 30);
+                chosenBiomes.Add(randGo.GetComponent<BiomeHandler>());
+                Vector3 pos = new Vector3(j * tileWidth, 0, -i * tileHeight);
                 Instantiate(randGo, pos, Quaternion.identity);
             }
         }
@@ -80,17 +83,17 @@ public class TerrainGeneration : MonoBehaviour
 
     public void GenerateGreenHotel()
     {
-        int line = Random.Range(0, 3);
-        int column = Random.Range(0, 3);
-        Vector3 position = new Vector3(-40 + column * 40, 0, line * 30);
+        int line = Random.Range(0, numLines);
+        int column = Random.Range(0, numColumns);
+        Vector3 position = new Vector3(column * 40, 0, -line * 30);
         Instantiate(greenHotel, position, Quaternion.identity);
     }
     
     public void GenerateRedHotel()
     {
-        int line = Random.Range(0, 3);
-        int column = Random.Range(0, 3);
-        Vector3 position = new Vector3(-40 + column * 40, 0, line * 30);
+        int line = Random.Range(0, numLines);
+        int column = Random.Range(0, numColumns);
+        Vector3 position = new Vector3(column * 40, 0, -line * 30);
         Instantiate(redHotel, position, Quaternion.identity);
     }
 }
