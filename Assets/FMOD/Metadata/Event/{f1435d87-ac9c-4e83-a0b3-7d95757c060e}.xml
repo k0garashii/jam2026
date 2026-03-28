@@ -456,6 +456,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{5dbab57d-8f94-45b8-970c-703d4e8e9fb1}">
+		<property name="volume">
+			<value>5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{552ce62f-d6ed-41f0-b8a7-832c7e61ef0f}</destination>
 		</relationship>
@@ -582,6 +585,9 @@
 		</property>
 		<property name="length">
 			<value>66.443732728291053</value>
+		</property>
+		<property name="volume">
+			<value>-5</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{7976d5c2-79a1-440b-94d9-8871a248146e}</destination>
@@ -770,6 +776,9 @@
 		<property name="length">
 			<value>23.331812500000002</value>
 		</property>
+		<property name="volume">
+			<value>-6.5</value>
+		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{227db726-22b3-42aa-baa3-a63de32eefc9}</destination>
 		</relationship>
@@ -783,6 +792,9 @@
 		</property>
 		<property name="length">
 			<value>23.331812500000002</value>
+		</property>
+		<property name="volume">
+			<value>-6.5</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{66cd950b-9be2-4871-8d49-573587d98adc}</destination>
@@ -801,6 +813,9 @@
 		<property name="length">
 			<value>23.331812500000002</value>
 		</property>
+		<property name="volume">
+			<value>-6.5</value>
+		</property>
 		<relationship name="fadeInCurve">
 			<destination>{f27c8259-9c40-4178-bd96-54580ee753eb}</destination>
 		</relationship>
@@ -817,6 +832,9 @@
 		</property>
 		<property name="length">
 			<value>23.331812500000002</value>
+		</property>
+		<property name="volume">
+			<value>-6.5</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{4c4eb591-e3be-4e2a-bbad-221c0f57be51}</destination>
@@ -1787,7 +1805,7 @@
 			<value>Purple</value>
 		</property>
 		<property name="volume">
-			<value>5.5</value>
+			<value>6</value>
 		</property>
 		<property name="name">
 			<value>SWAMP_FAUNA</value>
