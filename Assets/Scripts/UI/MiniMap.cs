@@ -1,29 +1,22 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MiniMap : MonoBehaviour
 {
-    public Slider slider;
+    public Button readyButton;
     public Image backgroundImage;
     public GameObject mapParent;
-    public float timer = 20f;
 
     private RectTransform rectTransform;
     private float currentTime = 0f;
-    private bool firstDraw;
-    private bool isBigMap = false;
+    private bool isBigMap = true;
 
     void OnEnable()
     {
-        firstDraw = true;
         rectTransform = mapParent.GetComponent<RectTransform>();
-    }
-
-    private void Update()
-    {
-        if(firstDraw)
-            UpdateMapTimer();
+        EventSystem.current.SetSelectedGameObject(readyButton.gameObject);
     }
 
     public void UpdateMapView()
@@ -46,18 +39,11 @@ public class MiniMap : MonoBehaviour
         rectTransform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
         backgroundImage.color = new Color(255, 255, 255, 0f);
     }
-    void UpdateMapTimer()
+
+    public void LaunchGame()
     {
-        currentTime += Time.deltaTime;
-        if (currentTime >= timer)
-        {
-            firstDraw = false;
-            currentTime = 0f;
-            slider.value = 0f;
-            SetMiniMapParameters();
-            GameManager.instance.Play();
-            return;
-        }
-        slider.value = currentTime / timer;
+        UpdateMapView();
+        GameManager.instance.Play();
+        readyButton.gameObject.SetActive(false);
     }
 }
