@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public Assets assets;
     public List<RawImage> biomes = new List<RawImage>();
     public List<RawImage> sounds = new List<RawImage>();
+    public MiniMap miniMap;
     public Button mainScreenButton;
     
     public static GameManager instance { get; private set; }
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
         terrain.GenerateGreenHotel();
     }
 
-    public void ShowMiniMap()
+    public void SetMiniMap()
     {
         for(int i = 0; i < terrain.chosenBiomes.Count; i++)
         {

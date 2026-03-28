@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public InputAction moveAction;
     public InputAction agreeAction;
     public InputAction disagreeAction;
+    public InputAction screenMapAction;
     public float moveSpeed = 5f;
 
     private Vector2 move;

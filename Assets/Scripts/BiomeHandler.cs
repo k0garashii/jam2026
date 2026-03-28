@@ -26,5 +26,11 @@ public enum SoundType
 public class BiomeHandler : MonoBehaviour
 {
     public BiomeType biomeType;
-    public SoundType soundType;
+    [HideInInspector] public SoundType soundType;
+
+    public void GenerateRandomSound()
+    {
+        int randomSound = Random.Range(0, 9);
+        soundType = (SoundType)randomSound;
+    }
 }

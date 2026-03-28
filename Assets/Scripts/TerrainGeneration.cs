@@ -73,10 +73,11 @@ public class TerrainGeneration : MonoBehaviour
         {
             for (int j = 0; j < numColumns; j++)
             {
-                GameObject randGo =  terrains[i * numLines + j].GetRandomTile();
-                chosenBiomes.Add(randGo.GetComponent<BiomeHandler>());
                 Vector3 pos = new Vector3(j * tileWidth, 0, -i * tileHeight);
-                Instantiate(randGo, pos, Quaternion.identity);
+                GameObject randGo = Instantiate(terrains[i * numLines + j].GetRandomTile(), pos, Quaternion.identity);
+                BiomeHandler biomeHandler = randGo.GetComponent<BiomeHandler>();
+                biomeHandler.GenerateRandomSound();
+                chosenBiomes.Add(biomeHandler);
             }
         }
     }
