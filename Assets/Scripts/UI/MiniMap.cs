@@ -9,7 +9,6 @@ public class MiniMap : MonoBehaviour
     public GameObject mapParent;
     public float timer = 20f;
 
-    private GameManager gameManager;
     private RectTransform rectTransform;
     private float currentTime = 0f;
     private bool firstDraw;

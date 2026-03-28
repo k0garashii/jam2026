@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7422194797843393414}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -177,6 +177,34 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     m_Flags: 0
+  agreeAction:
+    m_Name: Agree
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4f104f5e-fdaa-4c17-b6d7-04028c6413e9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  disagreeAction:
+    m_Name: Disagree
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4ed0d83a-f3cc-4aad-9a2a-5d599161bfde
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  screenMapAction:
+    m_Name: Screen Map
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7e89b2aa-0e21-4240-aa14-dac1f4b9a274
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  moveSpeed: 5
 --- !u!1 &8245882527939227778
 GameObject:
   m_ObjectHideFlags: 0
