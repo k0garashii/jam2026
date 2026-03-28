@@ -28,12 +28,16 @@ public class TerrainGeneration : MonoBehaviour
     public int numColumns = 6;
     public int tileWidth = 40;
     public int tileHeight = 30;
-    public GameObject greenHotel;
+    public GameObject blueHotel;
     public GameObject redHotel;
+    public GameObject purpleHotel;
     
     private List<TerrainPrefabs> terrains = new List<TerrainPrefabs>();
     void Start()
     {
+        GenerateHotel(blueHotel);
+        GenerateHotel(redHotel);
+        GenerateHotel(purpleHotel);
         SortTerrains();
         GenerateTerrain();
     }
@@ -73,6 +77,8 @@ public class TerrainGeneration : MonoBehaviour
             for (int j = 0; j < numColumns; j++)
             {
                 int index = i * numLines + j;
+                if(GameManager.instance.chosenBiomes[index])
+                    continue;
                 Vector3 pos = new Vector3(j * tileWidth, 0, -i * tileHeight);
                 GameObject randGo = Instantiate(terrains[index].GetRandomTile(), pos, Quaternion.identity);
                 BiomeHandler biomeHandler = randGo.GetComponent<BiomeHandler>();
@@ -81,20 +87,26 @@ public class TerrainGeneration : MonoBehaviour
             }
         }
     }
-
-    public void GenerateGreenHotel()
-    {
-        int line = Random.Range(0, numLines);
-        int column = Random.Range(0, numColumns);
-        Vector3 position = new Vector3(column * 40, 0, -line * 30);
-        Instantiate(greenHotel, position, Quaternion.identity);
-    }
     
-    public void GenerateRedHotel()
+    private void GenerateHotel(GameObject hotel)
     {
-        int line = Random.Range(0, numLines);
-        int column = Random.Range(0, numColumns);
-        Vector3 position = new Vector3(column * 40, 0, -line * 30);
-        Instantiate(redHotel, position, Quaternion.identity);
+        bool validPosition = false;
+        int line = 0;
+        int column = 0;
+        int index = 0;
+        while (!validPosition)
+        {
+            line = Random.Range(1, numLines - 1);
+            column = Random.Range(1, numColumns - 1);
+            index = line * numLines + column;
+            Debug.Log(index);
+            if(!GameManager.instance.chosenBiomes[index])
+                validPosition = true;
+        }
+        Vector3 position = new Vector3(column * tileWidth, 0, -line * tileHeight);
+        GameObject randGo = Instantiate(hotel, position, Quaternion.identity);
+        BiomeHandler biomeHandler = randGo.GetComponent<BiomeHandler>();
+        biomeHandler.Create(index);
+        GameManager.instance.chosenBiomes.Add(biomeHandler);
     }
 }

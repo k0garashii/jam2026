@@ -41,13 +41,13 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         terrain = GetComponent<TerrainGeneration>();
+        for(int i = 0; i < 36; i++)
+        {
+            chosenBiomes.Add(null);
+        }
         if (!instance)
             instance = this;
         EventSystem.current.SetSelectedGameObject(mainScreenButton.gameObject);
-    }
-    void Start()
-    {
-        terrain.GenerateGreenHotel();
     }
 
     public void SetMiniMap()
