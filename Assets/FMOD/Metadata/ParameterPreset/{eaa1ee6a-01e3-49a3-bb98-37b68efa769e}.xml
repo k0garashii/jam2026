@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{eaa1ee6a-01e3-49a3-bb98-37b68efa769e}">
+		<property name="name">
+			<value>Start_Crow</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d4931eb5-d256-474b-a5fb-810aabf96d73}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f145b50a-1288-4330-a784-1948198ee424}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f145b50a-1288-4330-a784-1948198ee424}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
