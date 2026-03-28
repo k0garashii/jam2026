@@ -10,6 +10,7 @@ public class FootstepPlayer : MonoBehaviour
 
     private Vector3 lastPosition;
     private float stepTimer;
+    private bool wasMoving;
 
     private void OnEnable()
     {
@@ -26,11 +27,20 @@ public class FootstepPlayer : MonoBehaviour
         if (horizontalDelta.sqrMagnitude <= MinMoveDistanceSqr)
         {
             stepTimer = 0f;
+            wasMoving = false;
             return;
         }
 
         if (GameManager.instance == null || GameManager.instance.CurrentBiome == null)
         {
+            return;
+        }
+
+        if (!wasMoving)
+        {
+            wasMoving = true;
+            PlayFootstep(GameManager.instance.CurrentBiome.biomeType);
+            stepTimer = 0f;
             return;
         }
 
@@ -48,32 +58,14 @@ public class FootstepPlayer : MonoBehaviour
     {
         lastPosition = transform.position;
         stepTimer = 0f;
+        wasMoving = false;
     }
 
     private static void PlayFootstep(BiomeType biomeType)
     {
         EventInstance footstepInstance = RuntimeManager.CreateInstance("event:/Footsteps");
-        footstepInstance.setParameterByNameWithLabel("Biome", GetBiomeLabel(biomeType));
+        footstepInstance.setParameterByNameWithLabel("Biome", BiomeAudioLabels.GetBiomeLabel(biomeType));
         footstepInstance.start();
         footstepInstance.release();
-    }
-
-    private static string GetBiomeLabel(BiomeType biomeType)
-    {
-        switch (biomeType)
-        {
-            case BiomeType.Forest:
-                return "Forest";
-            case BiomeType.Beach:
-                return "Beach";
-            case BiomeType.Mountain:
-            case BiomeType.BlueShrine:
-            case BiomeType.RedShrine:
-                return "Mountain";
-            case BiomeType.River:
-                return "Lake";
-            default:
-                return "Forest";
-        }
     }
 }
