@@ -3065,6 +3065,62 @@ PrefabInstance:
       propertyPath: MeshTransform
       value: 
       objectReference: {fileID: 1268949802}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: redShrineAction.m_Name
+      value: Red Shrine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: blueShrineAction.m_Name
+      value: Blue Shrine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: redShrineAction.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: blueShrineAction.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: agreeAction.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Gamepad>/buttonEast
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: redShrineAction.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 4db90bab-13d7-477c-9b0e-c7211f35d2ea
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: blueShrineAction.m_SingletonActionBindings.Array.data[0].m_Id
+      value: baaf984c-e5d0-4f52-9753-a2f460664a0c
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: disagreeAction.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Gamepad>/buttonWest
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: redShrineAction.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Gamepad>/buttonWest
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: blueShrineAction.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Gamepad>/buttonEast
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: redShrineAction.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Red Shrine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: blueShrineAction.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Blue Shrine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212874692184303330, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212874692184303330, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7422194797843393414, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
       propertyPath: m_Name
       value: Player
