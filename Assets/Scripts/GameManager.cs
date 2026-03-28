@@ -7,10 +7,13 @@ public class GameManager : MonoBehaviour
 {
     public PlayerController controller;
     public List<Button> mainScreenButtons = new List<Button>();
-
+    
     public static GameManager instance { get; private set; }
+    
+    private TerrainGeneration terrain;
     void Awake()
     {
+        terrain = GetComponent<TerrainGeneration>();
         if (!instance)
             instance = this;
         EventSystem.current.SetSelectedGameObject(mainScreenButtons[0].gameObject);
@@ -18,6 +21,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         controller.enabled = false;
+        terrain.GenerateGreenHotel();
     }
 
     public void Play()
