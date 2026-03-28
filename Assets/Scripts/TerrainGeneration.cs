@@ -32,7 +32,6 @@ public class TerrainGeneration : MonoBehaviour
     public GameObject redHotel;
     
     private List<TerrainPrefabs> terrains = new List<TerrainPrefabs>();
-    [HideInInspector] public List<BiomeHandler> chosenBiomes = new List<BiomeHandler>();
     void Start()
     {
         SortTerrains();
@@ -73,11 +72,12 @@ public class TerrainGeneration : MonoBehaviour
         {
             for (int j = 0; j < numColumns; j++)
             {
+                int index = i * numLines + j;
                 Vector3 pos = new Vector3(j * tileWidth, 0, -i * tileHeight);
-                GameObject randGo = Instantiate(terrains[i * numLines + j].GetRandomTile(), pos, Quaternion.identity);
+                GameObject randGo = Instantiate(terrains[index].GetRandomTile(), pos, Quaternion.identity);
                 BiomeHandler biomeHandler = randGo.GetComponent<BiomeHandler>();
-                biomeHandler.GenerateRandomSound();
-                chosenBiomes.Add(biomeHandler);
+                biomeHandler.Create(index);
+                GameManager.instance.chosenBiomes.Add(biomeHandler);
             }
         }
     }
