@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
-        transform.position = new Vector3(-1000, 0, -1000);
+        transform.position = new Vector3(-1000, 0.7f, -1000);
         moveAction.Enable();
         blueShrineAction.Enable();
         redShrineAction.Enable();
@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     void MovePlayer()
     {
         move = moveAction.ReadValue<Vector2>();
+        Debug.Log(move);
         Vector3 direction = new Vector3(move.x, 0, move.y);
         rb.linearVelocity = new Vector3(move.x, 0, move.y) * moveSpeed;
         if (direction.sqrMagnitude > 0.01f)

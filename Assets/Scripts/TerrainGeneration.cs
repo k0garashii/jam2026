@@ -97,7 +97,6 @@ public class TerrainGeneration : MonoBehaviour
             line = Random.Range(1, numLines - 1);
             column = Random.Range(1, numColumns - 1);
             index = line * numLines + column;
-            Debug.Log(index);
             if(!GameManager.instance.chosenBiomes[index])
                 validPosition = true;
         }
