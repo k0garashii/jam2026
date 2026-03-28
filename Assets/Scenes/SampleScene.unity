@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 55824750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -167.28586, y: -0.00002, z: 603.31195}
+  m_LocalPosition: {x: -12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -181,23 +181,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TerrainGeneration
   topLeft:
-  - {fileID: 995294580}
+    tiles:
+    - {fileID: 995294580}
   top:
-  - {fileID: 995294580}
+    tiles:
+    - {fileID: 995294580}
   topRight:
-  - {fileID: 995294580}
+    tiles:
+    - {fileID: 995294580}
   left:
-  - {fileID: 995294580}
+    tiles:
+    - {fileID: 995294580}
   center:
-  - {fileID: 995294580}
+    tiles:
+    - {fileID: 995294580}
   right:
-  - {fileID: 995294580}
+    tiles:
+    - {fileID: 995294580}
   bottomLeft:
-  - {fileID: 995294580}
+    tiles:
+    - {fileID: 995294580}
   bottom:
-  - {fileID: 995294580}
+    tiles:
+    - {fileID: 995294580}
   bottomRight:
-  - {fileID: 995294580}
+    tiles:
+    - {fileID: 995294580}
+  numLines: 6
+  numColumns: 6
+  greenHotel: {fileID: 0}
+  redHotel: {fileID: 0}
 --- !u!1 &113367361
 GameObject:
   m_ObjectHideFlags: 0
