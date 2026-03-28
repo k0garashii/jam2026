@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class QuitGame : MonoBehaviour
+    public class UIManager : MonoBehaviour
     {
         public void Quit()
         {
@@ -11,6 +11,11 @@ namespace UI
 #else
         Application.Quit();
 #endif
+        }
+        
+        public void ShowMiniMap()
+        {
+            GameManager.instance.ShowMiniMap();
         }
     }
 }
