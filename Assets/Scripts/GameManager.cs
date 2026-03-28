@@ -107,6 +107,8 @@ public class GameManager : MonoBehaviour
         controller.Deactivate();
         WinScreen.SetActive(true);
         EventSystem.current.SetSelectedGameObject(winScreenButton.gameObject);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Win");
+
     }
     
     public void Lose()
@@ -114,5 +116,6 @@ public class GameManager : MonoBehaviour
         controller.Deactivate();
         LoseScreen.SetActive(true);
         EventSystem.current.SetSelectedGameObject(loseScreenButton.gameObject);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Loose");
     }
 }
