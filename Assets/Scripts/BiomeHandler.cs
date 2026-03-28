@@ -36,7 +36,25 @@ public class BiomeHandler : MonoBehaviour
     }
     private void GenerateRandomSound()
     {
-        int randomSound = Random.Range(0, 9);
-        soundType = (AnimalType)randomSound;
+        if (biomeType == BiomeType.Forest)
+        {
+            int randomSound = Random.Range(0, 2);
+            soundType = (AnimalType)randomSound;
+        } else if (biomeType == BiomeType.Mountain)
+        {
+            int randomSound = Random.Range(2, 4);
+            soundType = (AnimalType)randomSound;
+        } else if (biomeType == BiomeType.Beach)
+        {
+            int randomSound = Random.Range(4, 6);
+            soundType = (AnimalType)randomSound;
+        } else if (biomeType == BiomeType.River)
+        {
+            int randomSound = Random.Range(6, 8);
+            soundType = (AnimalType)randomSound;
+        } else if (biomeType == BiomeType.BlueShrine || biomeType == BiomeType.RedShrine)
+        {
+            soundType = AnimalType.Shrine;
+        }
     }
 }

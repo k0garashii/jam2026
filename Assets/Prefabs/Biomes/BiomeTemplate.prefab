@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895e3f086ed56f342bc66d43fb9b4ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioTrigger
+  audioSource: []
 --- !u!114 &238486249485305218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,3 +225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5845efdcf662b41a128de0f28fc34c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BiomeHandler
+  biomeType: 0
+  soundType: 0
+  index: 0
