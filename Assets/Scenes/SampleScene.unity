@@ -1359,7 +1359,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
   m_PrefabInstance: {fileID: 9222454712343263595}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 9222454712343263596}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d49ab9aa0188e374ba0f4bee9bca885b, type: 3}
@@ -3028,98 +3028,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: AgreeAction.m_Name
-      value: Agree
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: agreeAction.m_Name
-      value: Agree
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: DisagreeAction.m_Name
-      value: Disagree
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: disagreeAction.m_Name
-      value: Disagree
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: moveAction.m_SingletonActionBindings.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: agreeAction.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: disagreeAction.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: moveAction.m_SingletonActionBindings.Array.data[5].m_Id
-      value: 4781dd5a-9b22-47a8-8cf5-d020349fd339
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: agreeAction.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 7a0e7efa-4729-4d97-96bf-f9026f896dec
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: moveAction.m_SingletonActionBindings.Array.data[5].m_Path
-      value: <Gamepad>/buttonSouth
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: agreeAction.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Gamepad>/buttonSouth
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: disagreeAction.m_SingletonActionBindings.Array.data[0].m_Id
-      value: b2c8df20-8591-4b0d-a838-a9b8202b150c
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: moveAction.m_SingletonActionBindings.Array.data[5].m_Action
-      value: Move
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: agreeAction.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Agree
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: disagreeAction.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Gamepad>/buttonNorth
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: disagreeAction.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Disagree
-      objectReference: {fileID: 0}
-    - target: {fileID: 4148375304448533651, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 20.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4148375304448533651, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -19.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4148375304448533651, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.8870109
-      objectReference: {fileID: 0}
-    - target: {fileID: 4148375304448533651, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.46174863
-      objectReference: {fileID: 0}
-    - target: {fileID: 4148375304448533651, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 6590283767758993761, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 32bed9e0ce445a0449015ada771dbba9, type: 2}
     - target: {fileID: 7422194797843393414, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3127,8 +3035,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7422194797843393414, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9222454712343263601}
   m_SourcePrefab: {fileID: 100100000, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+--- !u!1 &9222454712343263596 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7422194797843393414, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+  m_PrefabInstance: {fileID: 9222454712343263595}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9222454712343263601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222454712343263596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

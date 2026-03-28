@@ -1,20 +1,32 @@
+using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 public class AudioTrigger : MonoBehaviour
 {
-    private AudioSource audioSource;
+    public List<StudioEventEmitter> audioSource;
     private BiomeHandler biomeHandler;
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
         biomeHandler = GetComponentInParent<BiomeHandler>();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        // if(!audioSource.isPlaying)
-        //     audioSource.Play();
+        for (int i = 0; i < audioSource.Count; i++)
+        {
+            audioSource[i].Play();
+            audioSource[i].AllowFadeout = true;
+        }
         GameManager.instance.UpdatePlayerPosition(biomeHandler);
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        for (int i = 0; i < audioSource.Count; i++)
+        {
+            audioSource[i].Stop();
+        }
     }
 }
