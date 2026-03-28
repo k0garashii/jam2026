@@ -9,8 +9,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1501304455382623428, guid: d352695ae3c738e4cbac96619841a713, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.23123683
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501304455382623428, guid: d352695ae3c738e4cbac96619841a713, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0000081
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501304455382623428, guid: d352695ae3c738e4cbac96619841a713, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.38054276
       objectReference: {fileID: 0}
     - target: {fileID: 1501304455382623428, guid: d352695ae3c738e4cbac96619841a713, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25,8 +33,16 @@ PrefabInstance:
       value: Biome RUC 1 Beach
       objectReference: {fileID: 0}
     - target: {fileID: 2328274103642590804, guid: d352695ae3c738e4cbac96619841a713, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4937392
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328274103642590804, guid: d352695ae3c738e4cbac96619841a713, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6000007
+      value: 0.51735055
+      objectReference: {fileID: 0}
+    - target: {fileID: 2328274103642590804, guid: d352695ae3c738e4cbac96619841a713, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.25070724
       objectReference: {fileID: 0}
     - target: {fileID: 2328274103642590804, guid: d352695ae3c738e4cbac96619841a713, type: 3}
       propertyPath: m_LocalPosition.y
@@ -34,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2328274103642590804, guid: d352695ae3c738e4cbac96619841a713, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.19546226
+      value: -0.23678598
       objectReference: {fileID: 0}
     - target: {fileID: 6088962603194413664, guid: d352695ae3c738e4cbac96619841a713, type: 3}
       propertyPath: m_LocalScale.z
@@ -85,8 +101,20 @@ PrefabInstance:
       value: 0.9937477
       objectReference: {fileID: 0}
     - target: {fileID: 7042834195144588698, guid: d352695ae3c738e4cbac96619841a713, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.15863115
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042834195144588698, guid: d352695ae3c738e4cbac96619841a713, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0007072538
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042834195144588698, guid: d352695ae3c738e4cbac96619841a713, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.999989
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042834195144588698, guid: d352695ae3c738e4cbac96619841a713, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.41690058
       objectReference: {fileID: 0}
     - target: {fileID: 7469079409085057781, guid: d352695ae3c738e4cbac96619841a713, type: 3}
       propertyPath: biomeType

@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 519910732817853921}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.27570724, y: 20, z: -0.29463905}
-  m_LocalScale: {x: 0.431235, y: 40.00125, z: 0.4}
+  m_LocalPosition: {x: -0.31320724, y: 20, z: -0.3235656}
+  m_LocalScale: {x: 0.50623536, y: 40.00125, z: 0.45785198}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5337099820131445628}
@@ -140,8 +140,8 @@ Transform:
   m_GameObject: {fileID: 5488113754241426647}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.28054273, y: 20, z: -0.29463905}
-  m_LocalScale: {x: 0.431235, y: 40.00125, z: 0.4}
+  m_LocalPosition: {x: 0.30866772, y: 20, z: -0.3235656}
+  m_LocalScale: {x: 0.4874853, y: 40.00125, z: 0.45785198}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5337099820131445628}
@@ -252,8 +252,8 @@ Transform:
   m_GameObject: {fileID: 6976462951025808667}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.28054273, y: 20, z: 0.30042198}
-  m_LocalScale: {x: 0.431235, y: 40.00125, z: 0.4}
+  m_LocalPosition: {x: 0.31179273, y: 20, z: 0.32521617}
+  m_LocalScale: {x: 0.49373388, y: 40.00125, z: 0.44958803}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5337099820131445628}
@@ -347,6 +347,22 @@ PrefabInstance:
     - target: {fileID: 2260266055543306958, guid: 13ae4e9d9fc2e7947bbc974249df4f51, type: 3}
       propertyPath: m_Name
       value: Biome M 1 Beach
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082983539333560245, guid: 13ae4e9d9fc2e7947bbc974249df4f51, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4999868
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082983539333560245, guid: 13ae4e9d9fc2e7947bbc974249df4f51, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.45785198
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082983539333560245, guid: 13ae4e9d9fc2e7947bbc974249df4f51, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.31008226
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082983539333560245, guid: 13ae4e9d9fc2e7947bbc974249df4f51, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.32108378
       objectReference: {fileID: 0}
     - target: {fileID: 6775405046114519937, guid: 13ae4e9d9fc2e7947bbc974249df4f51, type: 3}
       propertyPath: m_LocalPosition.x

@@ -9,16 +9,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 58920332605233674, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30.500063
+      objectReference: {fileID: 0}
+    - target: {fileID: 58920332605233674, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 58920332605233674, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000000007450467
+      value: 0.000000014900991
       objectReference: {fileID: 0}
     - target: {fileID: 58920332605233674, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.12499809
+      value: -0.24999714
       objectReference: {fileID: 0}
     - target: {fileID: 58920332605233674, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
       propertyPath: m_LocalRotation.w
@@ -49,20 +53,52 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3885525530402936304, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9124996
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885525530402936304, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2531392
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885525530402936304, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.19758226
+      value: -0.041332245
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885525530402936304, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885525530402936304, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4582091
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649035270027152558, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.34373578
       objectReference: {fileID: 0}
     - target: {fileID: 4649035270027152558, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.28679278
+      value: 0.33054277
       objectReference: {fileID: 0}
     - target: {fileID: 4722117975337347909, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
       propertyPath: m_Name
-      value: BiomeTemplate Variant
+      value: Biome RBC 1 Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367323579949934142, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.78681153
       objectReference: {fileID: 0}
     - target: {fileID: 8367323579949934142, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.27570724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367323579949934142, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367323579949934142, guid: e893509bc255d1e4d8a226139e441b05, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28884125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

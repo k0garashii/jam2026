@@ -9,8 +9,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2048066450638497481, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1812531
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048066450638497481, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.24954398
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048066450638497481, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.024292804
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048066450638497481, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.4095731
+      value: -0.43849966
       objectReference: {fileID: 0}
     - target: {fileID: 2977243073687890227, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53,24 +65,48 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6746019512064759047, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.20124508
+      propertyPath: m_LocalScale.x
+      value: 0.48123667
       objectReference: {fileID: 0}
-    - target: {fileID: 7496325349952395388, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
-      propertyPath: m_Name
-      value: BiomeTemplate Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 7567359665100046231, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+    - target: {fileID: 6746019512064759047, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 0.7487648
       objectReference: {fileID: 0}
-    - target: {fileID: 7567359665100046231, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+    - target: {fileID: 6746019512064759047, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.30695724
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746019512064759047, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
       propertyPath: m_LocalPosition.y
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6746019512064759047, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.27562764
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496325349952395388, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+      propertyPath: m_Name
+      value: Biome BS 1 Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567359665100046231, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5562371
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567359665100046231, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.740502
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567359665100046231, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.34304276
+      objectReference: {fileID: 0}
+    - target: {fileID: 7567359665100046231, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.999998
+      objectReference: {fileID: 0}
     - target: {fileID: 7567359665100046231, guid: b788e896cfae3e5429d78db9238d32f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.19869022
+      value: 0.26894045
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
