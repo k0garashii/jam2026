@@ -1,22 +1,27 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
     public Transform MeshTransform;
     public InputAction moveAction;
-    public InputAction agreeAction;
-    public InputAction disagreeAction;
+    public InputAction blueShrineAction;
+    public InputAction redShrineAction;
     public InputAction screenMapAction;
     public float moveSpeed = 5f;
 
     private Animator animator;
+    private Rigidbody rb;
     private Vector2 move;
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         transform.position = new Vector3(-1000, 0, -1000);
         moveAction.Enable();
+        blueShrineAction.Enable();
+        redShrineAction.Enable();
     }
     
     private void FixedUpdate()
@@ -27,10 +32,9 @@ public class PlayerController : MonoBehaviour
 
     void MovePlayer()
     {
-        
-        move = moveAction.ReadValue<Vector2>() * moveSpeed;
+        move = moveAction.ReadValue<Vector2>();
         Vector3 direction = new Vector3(move.x, 0, move.y);
-        transform.Translate(direction * Time.fixedDeltaTime);
+        rb.linearVelocity = new Vector3(move.x, 0, move.y) * moveSpeed;
         if (direction.sqrMagnitude > 0.01f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(direction);
@@ -42,14 +46,20 @@ public class PlayerController : MonoBehaviour
 
     void HandleEndButton()
     {
-        if(agreeAction.IsPressed())
+        if(blueShrineAction.IsPressed())
         {
-            Debug.Log("Agree");
+            if(GameManager.instance.CurrentBiome.biomeType == BiomeType.RedShrine)
+                GameManager.instance.Win();
+            else if(GameManager.instance.CurrentBiome.biomeType == BiomeType.BlueShrine)
+                GameManager.instance.Lose();
         }
 
-        if (disagreeAction.IsPressed())
+        if (redShrineAction.IsPressed())
         {
-            Debug.Log("Disagree");
+            if(GameManager.instance.CurrentBiome.biomeType == BiomeType.RedShrine)
+                GameManager.instance.Lose();
+            else if(GameManager.instance.CurrentBiome.biomeType == BiomeType.BlueShrine)
+                GameManager.instance.Win();
         }
     }
 
@@ -62,9 +72,14 @@ public class PlayerController : MonoBehaviour
         GameManager.instance.UpdatePlayerPosition(startingBiome);
 
         FootstepPlayer footstepPlayer = GetComponent<FootstepPlayer>();
-        if (footstepPlayer != null)
+        if (footstepPlayer)
         {
             footstepPlayer.ResetFootsteps();
         }
+    }
+    
+    public void Deactivate()
+    {
+        enabled = false;
     }
 }
