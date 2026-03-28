@@ -10,7 +10,7 @@ public enum BiomeType
     RedShrine
 }
 
-public enum SoundType
+public enum AnimalType
 {
     Owl,
     Wolf,
@@ -26,5 +26,17 @@ public enum SoundType
 public class BiomeHandler : MonoBehaviour
 {
     public BiomeType biomeType;
-    public SoundType soundType;
+    [HideInInspector] public AnimalType soundType;
+    [HideInInspector] public int index;
+
+    public void Create(int listIndex)
+    {
+        GenerateRandomSound();
+        index = listIndex;
+    }
+    private void GenerateRandomSound()
+    {
+        int randomSound = Random.Range(0, 9);
+        soundType = (AnimalType)randomSound;
+    }
 }

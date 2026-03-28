@@ -33,8 +33,10 @@ public class GameManager : MonoBehaviour
     public Button mainScreenButton;
     
     public static GameManager instance { get; private set; }
+    [HideInInspector] public List<BiomeHandler> chosenBiomes = new List<BiomeHandler>();
     
     private TerrainGeneration terrain;
+    private int currentBiomeIndex = 0;
     void Awake()
     {
         terrain = GetComponent<TerrainGeneration>();
@@ -44,52 +46,56 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        controller.enabled = false;
         terrain.GenerateGreenHotel();
     }
 
-    public void ShowMiniMap()
+    public void SetMiniMap()
     {
-        for(int i = 0; i < terrain.chosenBiomes.Count; i++)
+        for(int i = 0; i < chosenBiomes.Count; i++)
         {
-            if(terrain.chosenBiomes[i].biomeType == BiomeType.Beach)
+            if(chosenBiomes[i].biomeType == BiomeType.Beach)
                 biomes[i].texture = assets.beach;
-            else if (terrain.chosenBiomes[i].biomeType == BiomeType.Forest)
-            {
+            else if (chosenBiomes[i].biomeType == BiomeType.Forest)
                 biomes[i].texture = assets.forest;
-            }
-            else if(terrain.chosenBiomes[i].biomeType == BiomeType.Mountain)
+            else if(chosenBiomes[i].biomeType == BiomeType.Mountain)
                 biomes[i].texture = assets.mountain;
-            else if(terrain.chosenBiomes[i].biomeType == BiomeType.River)
+            else if(chosenBiomes[i].biomeType == BiomeType.River)
                 biomes[i].texture = assets.river;
-            else if(terrain.chosenBiomes[i].biomeType == BiomeType.BlueShrine)
+            else if(chosenBiomes[i].biomeType == BiomeType.BlueShrine)
                 biomes[i].texture = assets.blueShrine;
-            else if(terrain.chosenBiomes[i].biomeType == BiomeType.RedShrine)
+            else if(chosenBiomes[i].biomeType == BiomeType.RedShrine)
                 biomes[i].texture = assets.redShrine;
             
-            if(terrain.chosenBiomes[i].soundType == SoundType.Owl)
+            if(chosenBiomes[i].soundType == AnimalType.Owl)
                 sounds[i].texture = assets.Owl;
-            else if(terrain.chosenBiomes[i].soundType == SoundType.Wolf)
+            else if(chosenBiomes[i].soundType == AnimalType.Wolf)
                 sounds[i].texture = assets.Wolf;
-            else if(terrain.chosenBiomes[i].soundType == SoundType.Seagull)
+            else if(chosenBiomes[i].soundType == AnimalType.Seagull)
                 sounds[i].texture = assets.Seagull;
-            else if(terrain.chosenBiomes[i].soundType == SoundType.Dolphin)
+            else if(chosenBiomes[i].soundType == AnimalType.Dolphin)
                 sounds[i].texture = assets.Dolphin;
-            else if(terrain.chosenBiomes[i].soundType == SoundType.Frog)
+            else if(chosenBiomes[i].soundType == AnimalType.Frog)
                 sounds[i].texture = assets.Frog;
-            else if(terrain.chosenBiomes[i].soundType == SoundType.Duck)
+            else if(chosenBiomes[i].soundType == AnimalType.Duck)
                 sounds[i].texture = assets.Duck;
-            else if(terrain.chosenBiomes[i].soundType == SoundType.Bear)
+            else if(chosenBiomes[i].soundType == AnimalType.Bear)
                 sounds[i].texture = assets.Bear;
-            else if(terrain.chosenBiomes[i].soundType == SoundType.Eagle)
+            else if(chosenBiomes[i].soundType == AnimalType.Eagle)
                 sounds[i].texture = assets.Eagle;
-            else if(terrain.chosenBiomes[i].soundType == SoundType.Shrine)
+            else if(chosenBiomes[i].soundType == AnimalType.Shrine)
                 sounds[i].texture = assets.Shrine;
         }
     }
 
+    public void UpdatePlayerPosition(BiomeHandler biomeHandler)
+    {
+        biomes[currentBiomeIndex].color = new Color(1, 1, 1, 1f);
+        currentBiomeIndex = biomeHandler.index;
+        biomes[currentBiomeIndex].color = new Color(1, 1, 0, 1f);
+    }
+
     public void Play()
     {
-        controller.enabled = true;
+        controller.Activate();
     }
 }
