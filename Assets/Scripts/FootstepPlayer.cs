@@ -5,7 +5,8 @@ using UnityEngine;
 public class FootstepPlayer : MonoBehaviour
 {
     [SerializeField, Min(0.05f)] private float stepInterval = 0.45f;
-    [SerializeField, Min(0f)] private float minimumMoveSpeed = 0.1f;
+
+    private const float MinMoveDistanceSqr = 0.0001f;
 
     private Vector3 lastPosition;
     private float stepTimer;
@@ -22,8 +23,7 @@ public class FootstepPlayer : MonoBehaviour
         horizontalDelta.y = 0f;
         lastPosition = currentPosition;
 
-        float moveSpeed = horizontalDelta.magnitude / Time.fixedDeltaTime;
-        if (moveSpeed < minimumMoveSpeed)
+        if (horizontalDelta.sqrMagnitude <= MinMoveDistanceSqr)
         {
             stepTimer = 0f;
             return;
