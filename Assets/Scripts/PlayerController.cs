@@ -3,19 +3,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public Transform MeshTransform;
     public InputAction moveAction;
     public InputAction agreeAction;
     public InputAction disagreeAction;
     public InputAction screenMapAction;
     public float moveSpeed = 5f;
 
-    private Rigidbody rb;
+    private Animator animator;
     private Vector2 move;
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         transform.position = new Vector3(-1000, 0, -1000);
         moveAction.Enable();
-        rb = GetComponent<Rigidbody>();
     }
     
     private void FixedUpdate()
@@ -26,8 +27,17 @@ public class PlayerController : MonoBehaviour
 
     void MovePlayer()
     {
+        
         move = moveAction.ReadValue<Vector2>() * moveSpeed;
-        transform.Translate(new Vector3(move.x, 0, move.y) * Time.fixedDeltaTime);
+        Vector3 direction = new Vector3(move.x, 0, move.y);
+        transform.Translate(direction * Time.fixedDeltaTime);
+        if (direction.sqrMagnitude > 0.01f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            MeshTransform.rotation = Quaternion.Lerp(MeshTransform.rotation, targetRotation, 10f * Time.fixedDeltaTime);
+        }
+        bool isMoving = move.sqrMagnitude > 0.01f;
+        animator.SetBool("isMoving", isMoving);
     }
 
     void HandleEndButton()

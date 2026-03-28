@@ -1003,6 +1003,11 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!4 &1125255121 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8057786698116710865, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+  m_PrefabInstance: {fileID: 9222454712343263595}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1138650237 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7997146630769303267, guid: d9a05611ed489ce40a53a9eb64463b3b, type: 3}
@@ -1818,7 +1823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6405400039904938890, guid: d9a05611ed489ce40a53a9eb64463b3b, type: 3}
       propertyPath: timer
-      value: 20
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6405400039904938890, guid: d9a05611ed489ce40a53a9eb64463b3b, type: 3}
       propertyPath: backgroundImage
@@ -3028,6 +3033,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 89531580314560146, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005865094226048646, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
+      propertyPath: MeshTransform
+      value: 
+      objectReference: {fileID: 1125255121}
     - target: {fileID: 7422194797843393414, guid: aee46494ae756344db51b33c4701e1d5, type: 3}
       propertyPath: m_Name
       value: Player
