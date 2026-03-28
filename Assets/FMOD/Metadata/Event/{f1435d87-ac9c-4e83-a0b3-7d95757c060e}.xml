@@ -366,6 +366,7 @@
 			<destination>{75eb126c-51dd-4e87-b497-79d8149c6ac2}</destination>
 			<destination>{f4da4d33-40f5-4411-a250-f34f2fdeeb19}</destination>
 			<destination>{f587175a-850d-480c-b001-9d2cb941abcd}</destination>
+			<destination>{04e58003-eef7-4a65-8894-6f189be6214b}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{445ee79a-a4de-4db5-af25-59d388987b0a}</destination>
@@ -420,6 +421,7 @@
 			<destination>{45fc99bc-8d12-4abd-9b63-e926244113c3}</destination>
 			<destination>{8a62fbad-ba92-40fe-a5f3-fac5cf6fc53b}</destination>
 			<destination>{f587175a-850d-480c-b001-9d2cb941abcd}</destination>
+			<destination>{04e58003-eef7-4a65-8894-6f189be6214b}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{1f77d5d4-1501-4d46-a844-1f32016f467a}</destination>
@@ -887,7 +889,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{85974892-f596-456e-8048-f31697db9b65}">
 		<property name="volume">
-			<value>-2</value>
+			<value>6.5</value>
 		</property>
 		<property name="name">
 			<value>SUB WIND</value>
@@ -2391,6 +2393,29 @@
 			<destination>{ea6d8209-3e6b-46cf-bb35-ddb6afead7c4}</destination>
 		</relationship>
 	</object>
+	<object class="SoundScatterer" id="{04e58003-eef7-4a65-8894-6f189be6214b}">
+		<property name="start">
+			<value>5</value>
+		</property>
+		<property name="minimumTimeBetweenSounds">
+			<value>2250</value>
+		</property>
+		<property name="maximumTimeBetweenSounds">
+			<value>7000</value>
+		</property>
+		<property name="minimumScatterDistance">
+			<value>3.60000014</value>
+		</property>
+		<property name="maximumScatterDistance">
+			<value>7.5999999</value>
+		</property>
+		<property name="pitchRandomization">
+			<value>4</value>
+		</property>
+		<relationship name="sound">
+			<destination>{5ae47082-387e-4d72-950b-b32c338b661c}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{445ee79a-a4de-4db5-af25-59d388987b0a}">
 		<property name="volume">
 			<value>-1</value>
@@ -3788,6 +3813,15 @@
 			<destination>{b72db624-23b7-43e3-bf2a-b0cfb1f05588}</destination>
 			<destination>{14506cab-137f-490d-9ca2-d7f3bea70af1}</destination>
 			<destination>{ed36c16f-e450-478f-83c6-9542dba1d567}</destination>
+		</relationship>
+	</object>
+	<object class="MultiSound" id="{5ae47082-387e-4d72-950b-b32c338b661c}">
+		<relationship name="sounds">
+			<destination>{114134d3-ec0b-4497-976b-1b37fd163972}</destination>
+			<destination>{dbc3a96e-51ac-447f-b36e-f8c0987ddcf1}</destination>
+			<destination>{493eda58-8dbd-4726-b653-4adb40745559}</destination>
+			<destination>{c2ddf8c8-85e4-4fdc-8912-d42c935f276b}</destination>
+			<destination>{79cf54a3-8066-444c-b3dd-93d86ee165c4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{f670ce88-715a-4281-9271-f31333db4d47}">
@@ -6125,6 +6159,31 @@
 			<destination>{cdad5f90-98c5-44f9-bd1c-76a30838953c}</destination>
 		</relationship>
 	</object>
+	<object class="SingleSound" id="{114134d3-ec0b-4497-976b-1b37fd163972}">
+		<relationship name="audioFile">
+			<destination>{8a1a820a-9f73-465f-97c6-674c569f9923}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{dbc3a96e-51ac-447f-b36e-f8c0987ddcf1}">
+		<relationship name="audioFile">
+			<destination>{b1faae4c-6467-462b-96ef-8fd194960744}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{493eda58-8dbd-4726-b653-4adb40745559}">
+		<relationship name="audioFile">
+			<destination>{389be261-4950-49f9-a91f-286f5964c5d4}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{c2ddf8c8-85e4-4fdc-8912-d42c935f276b}">
+		<relationship name="audioFile">
+			<destination>{02382e0e-84c9-4635-a9c9-bfcc052e227f}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{79cf54a3-8066-444c-b3dd-93d86ee165c4}">
+		<relationship name="audioFile">
+			<destination>{93142beb-cdc4-4f1a-8b01-9b50d2468061}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{e953a4bf-9a81-4f71-b9e5-bd698a5e83a1}" />
 	<object class="ThreeEQEffect" id="{a173b6e3-2435-468c-8e5a-2fef5bdd7af7}">
 		<property name="lowGain">
@@ -6142,15 +6201,18 @@
 			<value>11.5</value>
 		</property>
 		<property name="level">
-			<value>-23</value>
+			<value>-25</value>
 		</property>
 		<property name="delayChangeMode">
 			<value>1</value>
 		</property>
 	</object>
 	<object class="ChorusEffect" id="{c09f4c3b-8850-48fa-8de3-958915159565}">
+		<property name="rate">
+			<value>0.359999985</value>
+		</property>
 		<property name="depth">
-			<value>11</value>
+			<value>17</value>
 		</property>
 		<property name="mix">
 			<value>46.5</value>
@@ -6175,7 +6237,7 @@
 			<value>8</value>
 		</property>
 		<property name="level">
-			<value>-33</value>
+			<value>-30</value>
 		</property>
 		<property name="delayChangeMode">
 			<value>1</value>
