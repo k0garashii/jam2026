@@ -7,6 +7,7 @@ public class BiomeSoundPlayer : MonoBehaviour
     private EventInstance biomeInstance;
     private Rigidbody playerRigidbody;
     private string currentBiomeLabel;
+    private string currentAnimalLabel;
     private bool hasInstance;
 
     private void Awake()
@@ -17,12 +18,12 @@ public class BiomeSoundPlayer : MonoBehaviour
     private void OnEnable()
     {
         CreateBiomeInstance();
-        UpdateBiomeParameter();
+        UpdateBiomeParameters();
     }
 
     private void Update()
     {
-        UpdateBiomeParameter();
+        UpdateBiomeParameters();
     }
 
     private void OnDisable()
@@ -56,21 +57,26 @@ public class BiomeSoundPlayer : MonoBehaviour
         hasInstance = true;
     }
 
-    private void UpdateBiomeParameter()
+    private void UpdateBiomeParameters()
     {
         if (!hasInstance || GameManager.instance == null || GameManager.instance.CurrentBiome == null)
         {
             return;
         }
 
-        string biomeLabel = BiomeAudioLabels.GetBiomeLabel(GameManager.instance.CurrentBiome.biomeType);
-        if (biomeLabel == currentBiomeLabel)
+        BiomeHandler currentBiome = GameManager.instance.CurrentBiome;
+        string biomeLabel = BiomeAudioLabels.GetBiomeLabel(currentBiome.biomeType);
+        string animalLabel = BiomeAudioLabels.GetAnimalLabel(currentBiome.soundType);
+
+        if (biomeLabel == currentBiomeLabel && animalLabel == currentAnimalLabel)
         {
             return;
         }
 
         currentBiomeLabel = biomeLabel;
+        currentAnimalLabel = animalLabel;
         biomeInstance.setParameterByNameWithLabel("Biome", currentBiomeLabel);
+        biomeInstance.setParameterByNameWithLabel("Animal", currentAnimalLabel);
     }
 
     private void ReleaseBiomeInstance()
@@ -84,5 +90,6 @@ public class BiomeSoundPlayer : MonoBehaviour
         biomeInstance.release();
         hasInstance = false;
         currentBiomeLabel = null;
+        currentAnimalLabel = null;
     }
 }
