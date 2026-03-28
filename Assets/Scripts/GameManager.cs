@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     
     public static GameManager instance { get; private set; }
     [HideInInspector] public List<BiomeHandler> chosenBiomes = new List<BiomeHandler>();
+    public BiomeHandler CurrentBiome { get; private set; }
     
     private TerrainGeneration terrain;
     private int currentBiomeIndex = 0;
@@ -89,6 +90,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdatePlayerPosition(BiomeHandler biomeHandler)
     {
+        CurrentBiome = biomeHandler;
         biomes[currentBiomeIndex].color = new Color(1, 1, 1, 1f);
         currentBiomeIndex = biomeHandler.index;
         biomes[currentBiomeIndex].color = new Color(1, 1, 0, 1f);

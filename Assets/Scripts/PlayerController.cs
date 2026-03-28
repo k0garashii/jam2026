@@ -46,7 +46,15 @@ public class PlayerController : MonoBehaviour
     public void Activate()
     {
         int randIndex = Random.Range(0, GameManager.instance.chosenBiomes.Count);
-        transform.position = GameManager.instance.chosenBiomes[randIndex].transform.position;
+        BiomeHandler startingBiome = GameManager.instance.chosenBiomes[randIndex];
+        transform.position = startingBiome.transform.position;
         transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+        GameManager.instance.UpdatePlayerPosition(startingBiome);
+
+        FootstepPlayer footstepPlayer = GetComponent<FootstepPlayer>();
+        if (footstepPlayer != null)
+        {
+            footstepPlayer.ResetFootsteps();
+        }
     }
 }
